@@ -697,7 +697,7 @@ int main(int argc, const char *argv[]) {
                     alloc /= 16;
                     alloc *= 16;
 
-                    asprintf(&arg, "%lu", alloc);
+                    asprintf(&arg, "%zu", alloc);
                     args.push_back(arg);
                 }
 

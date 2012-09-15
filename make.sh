@@ -4,7 +4,11 @@ set -e -x
 
 flags=()
 
-sdk=/Developer/SDKs/MacOSX10.5.sdk
+#change these to your XCode install path and the SDK version
+xcodepath=/Applications/Xcode.app
+sdkversion=10.7
+
+sdk=$xcodepath/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX$sdkversion.sdk/
 if [[ -e $sdk ]]; then
     flags+=(-mmacosx-version-min=10.4 -isysroot "$sdk")
 fi
